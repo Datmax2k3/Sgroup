@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // min
+        function min(a, b) {
+            console.log(a>b ? b : a); 
+        }
+        // pow
+        function pow(a, b) {
+            let x = 1;
+            for(let i = 1; i <= b; i++) {
+                x *= a ;
+            }
+            console.log(x); 
+        }
+        min(2,5);
+        min(3,-1);
+        min(1,1);   
+
+        pow(0,0);
+        pow(1,0);
+        pow(3,2);
+        pow(3,3);
+        pow(1,100);
+    </script>
+</body>
+</html>

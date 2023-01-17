@@ -1,0 +1,117 @@
+body {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    background-color: black;
+    font-family: 'Roboto Flex', sans-serif;
+}
+span {
+    font-weight: 800;
+}
+.main {
+}
+.img1 {
+    
+}
+.img2 {
+
+}
+.img1, .img2 {
+    margin: 0 20px;
+    position: relative;
+    overflow: hidden;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+.img2 img, .img1 img{
+    transform: translate(5%);
+    
+    transition: 0.3s;
+}
+.img1:hover img, .img2:hover img{
+    /* animation: img1after 0.3s; */
+    transform: translate(0%);
+    
+    transition: 0.3s;
+}
+.img1:hover, .img2:hover{
+    opacity: 1;
+
+}
+
+.img1:hover .text, .img2:hover .text{
+    top: 60%;
+}
+.img1:hover .text2, .img2:hover .text2{
+    opacity: 1;
+    top: 72%;
+}
+
+@keyframes img1after {
+    from {opacity: 0.6;}
+    to {opacity: 1;}
+}
+.text {
+    position: absolute;
+    top: 65%;
+    left: 8%;
+    font-size: 30px;
+    color: aliceblue;
+    transition: 0.3s;
+    font-weight: 100;
+}
+.text2{
+    position: absolute;
+    top: 85%;
+    left: 8%;
+    font-size: 18px;
+    opacity: 0;
+    transition: 0.3s;
+}
+.img1::after, .img2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 95%;
+    left: 0;
+    bottom: 0;
+    background-color: black;
+}
+
+/* ảnh 2 */
+
+.text3 {
+    position: absolute;
+    right: 28%;
+    top: 20%;
+    font-size: 30px;
+    transition: 0.3s;
+}
+.img2:hover .text3{
+    top: 15%;
+    color: white;
+}
+.img2:hover .text4{
+    top: 80%;
+    color: white;
+}
+.img2:hover {
+    transform: 0.2s;
+    background-image: linear-gradient(180deg, white, black);
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0.6;
+}
+.text4{
+    position: absolute;
+    right: 22%;
+    top: 100%;
+    transition: 0.2s;
+    text-align: center;
+}
+.img2 {
+    opacity: 1;
+}

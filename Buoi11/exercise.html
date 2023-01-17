@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+        }
+        .red {
+            color: red;
+        }
+        .blue {
+            color: blue;
+        }
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .dot {
+            font-size: 90px;
+            margin: 0 20px;
+        }
+        .fa-solid.fa-lightbulb {
+            padding: 0 15px;
+            font-size: 80px;
+            margin-top: 120px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <i class="fa-solid fa-lightbulb"></i>
+        <i class="fa-solid fa-lightbulb"></i>
+        <i class="fa-solid fa-lightbulb"></i>
+        <i class="fa-solid fa-lightbulb"></i>
+        <i class="fa-solid fa-lightbulb"></i>
+    </div>
+
+    <script>
+        function flashLight(bulb, color) {
+            const n = bulb.length;
+            let i = 0;
+            setInterval(function() {
+                if(i >= n) i = 0
+
+                bulb[i].classList.add('red')
+                i++
+
+                setTimeout(function() {
+                    bulb[i - 1].classList.remove('red')
+                }, 1980)
+            }, 2000)
+        }
+        let bulbArr = document.querySelectorAll("i");
+        console.log(bulbArr);
+        const redd = 'red'
+        flashLight(bulbArr, redd)
+    </script>
+</body>
+</html>
